@@ -12,7 +12,7 @@ Feature: Logowanie do aplikacji
     And Uzytkownik klika przycisk Login
     Then Uzytkownik zostaje poprawnie zalogowany do aplikacji
 
-  Scenario: Poprawne logowanie do aplikacji
+  Scenario: Niepoprawne logowanie do aplikacji
     Given Uzytkownik otwiera przeglarke
     And Uzytkownik wpisuje adres strony internetowej
     When Uzytkownik wpisuje poprawny login
