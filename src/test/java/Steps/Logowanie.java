@@ -51,11 +51,13 @@ public class Logowanie {
     }
     @When("Uzytkownik wpisuje niepoprawne haslo")
     public void uzytkownik_wpisuje_niepoprawne_haslo() {
-        System.out.println("Krok ");
+        System.out.println("Krok 7 - Uzytkownik wpisuje niepoprawne haslo ");
+        driver.findElement(By.name("password")).sendKeys("SuperSecretPassword");
 
     }
     @Then("Uzytkownik nie zostaje poprawnie zalogowany do aplikacji")
     public void uzytkownik_nie_zostaje_poprawnie_zalogowany_do_aplikacji() {
-
+        System.out.println("Krok 8 - Uzytkownik nie zostaje poprawnie zalogowany do aplikacji");
+        Assert.assertEquals("https://the-internet.herokuapp.com/login", driver.getCurrentUrl());
     }
 }
